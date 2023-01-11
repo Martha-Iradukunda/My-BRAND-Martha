@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Martha's Blogs page</title>
+    <!----CSS link----->
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+
+
+
+    <script src="https://kit.fontawesome.com/ee4169bd2e.js" crossorigin="anonymous"></script>
+
+
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <!-- swiper slider css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA==" crossorigin="anonymous" />
+
+
+</head>
+
+<body onload="getBlogs()">
+
+    <div class="hero">
+        <nav>
+            <img src="./img/mylogo.png" class="logo">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blogs.html">BLOGS</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="portifolio.html">PORTIFOLIO</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="content">
+
+            <form action="/action_page.php">
+                <center>
+                    <h1>Create your blogs</h1>
+                </center>
+                <label for="title">Title:</label><br>
+                <input type="text" id="titleBlog" name="titleBlog"><br>
+                <label for="blog">Blog:</label><br>
+                <textarea id="bodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea> <br><br>
+                <!-- <input type="submit" value="Submit" onclick="createBlog()"> -->
+
+                <button class="btn" onclick="createBlog()">Create</button>
+
+            </form>
+            <br><br>
+
+
+            <ul id="blogsDisplay"></ul>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content-one">
+                    <div class="modal-content-two">
+                        <span class="close">&times;</span>
+
+                    </div>
+                    <div id="h5-holder">
+                        <h5 id="h5-update-form">Update Form</h5><br>
+                    </div>
+
+                    <div class="former-holder-update">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Title:</label>
+
+                            <input type="text" class="form-control" id="ediTitleContact">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Blog:</label>
+                            <textarea id="editBodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea>
+                        </div><br>
+
+                        <div class="button-holder">
+
+                            <input type="submit" value="Edit" id="updateButton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <main class="cards-container">
+                <section class="card margin">
+                    <figure>
+
+                        <img class="main-img" src="./img/desk.jpg" alt="Desk">
+                        <figcaption>Desk</figcaption>
+                    </figure>
+                    <h3 class="font-sans-700 blog-font-h3 ">Article Title: Desk</h3>
+                    <h4 class="font-sans-300 blog-font-h2 ">What i need daily</h4>
+                    <h4 class="font-sans-300 blog-font-h4 ">00 Month</h4>
+                    <button>
+                        <a href="post.html" class="button">Read More</a>
+                    </button>
+                </section>
+                <section class="card margin">
+                    <figure>
+
+                        <img class="main-img" src="./img/coding.jpg" alt="coding">
+                        <figcaption>Desk</figcaption>
+                    </figure>
+                    <h3 class="font-sans-700 blog-font-h3 ">Article Title: Coding</h3>
+                    <h4 class="font-sans-300 blog-font-h2 ">Coding has been a treasure to me</h4>
+                    <h4 class="font-sans-300 blog-font-h4 ">00 Month</h4>
+                    <button>
+                        <a href="post.html" class="button">Read More</a>
+                    </button>
+                </section>
+                <section class="card margin">
+                    <figure>
+
+                        <img class="main-img" src="./img/food.png" alt="food">
+                        <figcaption>Desk</figcaption>
+                    </figure>
+                    <h3 class="font-sans-700 blog-font-h3 ">Article Title: Fav food</h3>
+                    <h4 class="font-sans-300 blog-font-h2 ">The most delicious meal for youngstars</h4>
+                    <h4 class="font-sans-300 blog-font-h4 ">00 Month</h4>
+                    <button>
+                        <a href="post.html" class="button">Read More</a>
+                    </button>
+                </section>
+
+
+
+            </main>
+            <footer>
+                <span class="font-sans-400 ">&copy; Martha-2022</span>
+            </footer>
+
+
+
+
+            <br><br> I hope your experience was:
+
+            <i class="fa-solid fa-star "></i>
+            <i class="fa-solid fa-star "></i>
+            <i class="fa-solid fa-star "></i>
+            <i class="fa-solid fa-star "></i>
+            <i class="fa-solid fa-star "></i>
+            <i class="fa-solid fa-star-o "></i>
+
+            <br><br>
+
+            <br><br><br> Reach out to me on these social media platforms
+            <a href="https://www.facebook.com/ "> <i class="fa-brands fa-facebook fa- "></i></a>
+            <a href="mailto:marthairadukunda1@gmail.com "><i class="fa-solid fa-envelope fa-70X "></i>
+                </a>
+            <a href="https://www.linkedin.com/in/martha-iradukunda-1305b3241 "><i class="fa-brands fa-linkedin "></i>
+                </a>
+            <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1 "><i class="fa-brands fa-square-google-plus "></i>
+                </a> Please feel free to do so
+            <br><br>
+
+
+            <center>
+                <p> <i class="fa-solid fa-copyright "></i> Made with <i class="fa-solid fa-heart "></i> by @Martha Iradukunda</p>
+            </center>
+            <br><br>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
