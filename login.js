@@ -135,31 +135,38 @@ function getBlogs() {
 
         blogs.forEach(function(blog, index) {
             let li = document.createElement("li");
-            li.innerText = "Title: " + blog.title + " Body: " + blog.body + " Likes: " + blog.likes;
+            li.innerText = "\n\n\nTitle: " + blog.title + "\nBody: " + blog.body + "\nLikes: " + blog.likes + "\n\n";
 
             var editbutton = document.createElement("button");
-            editbutton.innerHTML = 'Edit';
+            editbutton.innerHTML = 'Edit ';
             editbutton.onclick = function() {
                 editBlog(blog.title, blog.body);
             };
 
             var deletebutton = document.createElement("button");
-            deletebutton.innerHTML = 'Delete';
+            deletebutton.innerHTML = 'Delete  ';
             deletebutton.onclick = function() {
                 deleteBlog(blog.title);
             };
 
             var likebutton = document.createElement("button");
             likebutton.innerHTML = 'Like';
+
             likebutton.onclick = function() {
                 likeABlog(blog.title);
             };
 
             blogsDisplay.appendChild(li);
             blogsDisplay.appendChild(deletebutton);
+            // console.log("\t\t");
             blogsDisplay.appendChild(editbutton);
+            console.log("\t\t");
+
             blogsDisplay.appendChild(likebutton);
+
+
         });
+
 
     }
 }
@@ -236,6 +243,7 @@ function deleteBlog(title) {
             blogs.splice(index, 1);
             localStorage.setItem("blog32", JSON.stringify(blogs));
             getBlogs();
+
         }
     });
 }
@@ -282,3 +290,31 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
     container.classList.remove("sign-up-mode");
 });
+
+//Local storage
+function setItem() {
+    var name = "Marita";
+    localStorage.setItem("name", JSON.stringify(name));
+}
+
+function getItem() {
+    var nameTwo = window.localStorage.getItem("name");
+    console.log(JSON.parse(nameTwo));
+}
+//LOCALSTORAGE 2 On LOGIN/SIGNup ACCOUNTS
+// const Acccount = {
+//     username,
+//     email,
+//     password,
+//     passpword2,
+// };
+// let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+// if (accounts.some((account) => account.email === email)) {
+//     window.location.href = "login.html";
+//     alert("The account already exists.");
+//     return;
+// }
+// accounts.push(account);
+// localStorage.setItem("accounts", JSON.stringify(accounts));
+// window.location.href = "home.html";
+// alert("Account created successfully");

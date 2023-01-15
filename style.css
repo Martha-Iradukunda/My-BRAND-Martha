@@ -68,12 +68,10 @@ nav ul li a:hover:after {
     width: 100%;
 }
 
-nav ul li a:active {
-    color: rgb(157, 8, 57);
-}
-
-nav ul li a:active {
-    color: rgb(15, 180, 72);
+a.active,
+a:hover {
+    color: #fb750e;
+    transition: .5s;
 }
 
 .btn {
