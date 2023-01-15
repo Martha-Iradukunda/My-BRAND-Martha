@@ -24,14 +24,14 @@
 </head>
 
 <body onload="getBlogs()">
-
+    <!-- <img src="./img/blogimg.jpg" class="bg" alt=""> -->
     <div class="hero">
         <nav>
             <img src="./img/mylogo.png" class="logo">
             <ul>
                 <li><a href="home.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="blogs.html">BLOGS</a></li>
+                <li><a class="active" href="blogs.html">BLOGS</a></li>
                 <li><a href="contact.html">CONTACTS</a></li>
                 <li><a href="skills.html">SKILLS</a></li>
                 <li><a href="portifolio.html">PORTIFOLIO</a></li>
@@ -42,13 +42,13 @@
         </nav>
 
         <div class="content">
-
             <form action="/action_page.php">
+
                 <center>
                     <h1>Create your blogs</h1>
                 </center>
                 <label for="title">Title:</label><br>
-                <input type="text" id="titleBlog" name="titleBlog"><br>
+                <input type="text" id="titleBlog" name="titleBlog"><br><br>
                 <label for="blog">Blog:</label><br>
                 <textarea id="bodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea> <br><br>
                 <!-- <input type="submit" value="Submit" onclick="createBlog()"> -->
@@ -56,10 +56,12 @@
                 <button class="btn" onclick="createBlog()">Create</button>
 
             </form>
+
             <br><br>
 
 
             <ul id="blogsDisplay"></ul>
+
 
             <div id="myModal" class="modal">
                 <div class="modal-content-one">
