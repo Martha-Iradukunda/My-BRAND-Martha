@@ -28,7 +28,7 @@ function validate() {
 
     if (password.value.length >= 8 && userrname.value.length >= 5) {
         alert("Login Succesfull");
-        window.location.replace("home.html");
+        window.location.replace("index.html");
         return false;
     } else {
         alert("Login Failed");
