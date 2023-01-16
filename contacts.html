@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martha's site</title>
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="Allstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <img src="./img/mylogo.png" class="logo">
+
+        <ul>
+            <li><a href="home.html">HOME</a>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blogs.html">BLOGS</a></li>
+                <li><a href="contacts.html" class="active">CONTACTS</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="portifolio.html">PORTIFOLIO</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+        </ul>
+    </nav>
+
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch,</div>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Martha Iradukunda</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Rwamagana, Rwanda</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">marthairadukunda1@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM -->
+                <div class="column right">
+
+
+                    <h1>You can Message me using the form below</h1><br><br>
+                    <br><br>
+
+                    <form name=Contact-me>
+
+
+
+                        <label for="email">Your email:    </label>
+                        <input type="email" id="emailContact" name="email"> <br>
+
+                        <br> First Name: <input type="text" name="fname" id="firstNameContact"><br><br> Last Name: <input type="text" name="lastname" id="lastNameContact"><br><br> Other Names(Optional): <input type="type" name="othernames" id="otherNameContact">
+                        <br><br>
+                        <p><b><i> Type your message here </p></b></i>
+                            <textarea rows=8 cols=60 id="messageContact"></textarea>
+
+                            <button class="btn" onclick="createContact()">Submit</button>
+                            <br><br>
+                            <br><br> <br><br>
+
+
+
+                    </form>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255203.55349827348!2d29.987157613423413!3d-1.9297648363662614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411d0bc8!2sKigali%2C%20Rwanda!5e0!3m2!1sen!2ske!4v1670438359786!5m2!1sen!2ske"
+                        width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+
+                    <br><br>
+                    <br><br>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section start -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>r><br><br><br><br><br><br><br><br><br><br><br><br>r><br><br><br><br><br><br><br><br>
+    <footer>
+        <span>Created By <a href="https://www.youtube.com/channel/UCt3FM2IEMBHF12MhLArIytA">@Martha I</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+    </footer>
+    <!-- <script src="script.js"></script> -->
+
+</body>
+
+</html>
