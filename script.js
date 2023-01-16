@@ -26,7 +26,7 @@ function validate() {
 
     var length = document.getElementById("length");
 
-    if (password.value.length >= 8 && userrname.value.length >= 5) {
+    if (password.value.length >= 8 && password.value == "87654321" && userrname.value == "marita" && userrname.value.length >= 5) {
         alert("Login Succesfull");
         window.location.replace("index.html");
         return false;
