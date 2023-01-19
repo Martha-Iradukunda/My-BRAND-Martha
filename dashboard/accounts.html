@@ -4,19 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">]
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="Allstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="/Allstyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <title>User accounts</title>
 </head>
-<p> All user accounts will be here
-</p>
+<!-- <p> All user accounts will be here
+</p> -->
 
 <body>
 
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <img src="/img/mylogo.png" class="logo">
 
+        <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/dashboard/blogadmin.html" class="active">ADMIN</a></li>
+
+
+
+        </ul>
+    </nav>
+
+    <section class="dashboardSec">
+
+        <aside>
+
+
+            <br><br><br>
+            <h3> <a href="/dashboard/adminstrator.html">DASHBOARD</a></h3>
+            <br><br>
+
+            <h3> <a href="/dashboard/blogadmin.html">BLOGS</a>
+            </h3><br><br>
+
+            <h3> <a href="/dashboard/accounts.html">USERS</a></h3><br><br>
+            <h3> <a href="/dashboard/messages.html">MESSAGES</a></h3>
+            <br><br><br><br><br><br><br> <br><br><br><br><br><br><br>
+
+
+        </aside>
+
+        <main>
+            <div class="header">
+                <div class="table_header">
+                    <p>
+                        <a href="#"><button class="search"> manager Users</button></a>
+                    </p>
+                    <div>
+                        <input type="text" placeholder="Find user..">
+                        <button class="search">search</button>
+                    </div>
+                </div>
+                <div class="table_section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>User name</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Martha</td>
+                                <td>marthairadukunda1@gmail.com</td>
+                                <td>Marita</td>
+                                <td>Owner</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+
+    </section>
 
 
 </body>

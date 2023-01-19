@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">]
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="Allstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="/Allstyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <title>Blogs admin</title>
@@ -19,71 +19,81 @@
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
         </label>
-        <img src="./img/mylogo.png" class="logo">
+        <img src="/img/mylogo.png" class="logo">
 
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="blogadmin.html" class="active">ADMIN</a></li>
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/dashboard/blogadmin.html" class="active">ADMIN</a></li>
 
 
 
         </ul>
     </nav>
 
-    <aside>
+    <section class="dashboardSec">
 
-        <!-- <u> <h1>DASHBOARD</h1></u>
-        <br><br><br> -->
-        <h2> <a href="adminstrator.html">DASHBOARD</a</h2> 
-    
-    
-        <h2> <a href="blogadmin.html">BLOGS</a>
-        </h2> <br><br>
-
-        <h2> <a href="accounts.html">USERS</a</h2>
-            <h2> <a href="messages.html">MESSAGES</a</h2> 
- 
-
-    </aside>
+        <aside>
 
 
-    <form>
-        <label for="title">Title:</label><br>
-        <input type="text" id="titleBlog" name="titleBlog"><br>
-        <label for="blog">Blog:</label><br>
-        <textarea id="bodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea>
-        <input type="submit" value="Submit" onclick="createBlog()">
-    </form>
+            <br><br><br>
+            <h3> <a href="/dashboard/adminstrator.html">DASHBOARD</a></h3>
+            <br><br>
 
-    <ul id="blogsDisplay"></ul>
+            <h3> <a href="/dashboard/blogadmin.html">BLOGS</a>
+            </h3><br><br>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content-one">
-            <div class="modal-content-two">
-                <span class="close">&times;</span>
+            <h3> <a href="/dashboard/accounts.html">USERS</a></h3><br><br>
+            <h3> <a href="/dashboard/messages.html">MESSAGES</a></h3>
+            <br><br><br><br><br><br><br> <br><br><br><br><br><br><br>
 
-            </div>
-            <div id="h5-holder">
-                <h5 id="h5-update-form">Update Form</h5><br>
-            </div>
 
-            <div class="former-holder-update">
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Title:</label>
-                    <input type="text" class="form-control" id="ediTitleContact">
+
+        </aside>
+
+        <main>
+
+            <form>
+                <label for="title">Title:</label><br>
+                <input type="text" id="titleBlog" name="titleBlog"><br>
+                <label for="blog">Blog:</label><br>
+                <textarea id="bodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea>
+                <input type="submit" value="Submit" onclick="createBlog()">
+            </form>
+
+            <ul id="blogsDisplay"></ul>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content-one">
+                    <div class="modal-content-two">
+                        <span class="close">&times;</span>
+
+                    </div>
+                    <div id="h5-holder">
+                        <h5 id="h5-update-form">Update Form</h5><br>
+                    </div>
+
+                    <div class="former-holder-update">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Title:</label>
+                            <input type="text" class="form-control" id="ediTitleContact">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Blog:</label>
+                            <textarea id="editBodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea>
+                        </div><br>
+
+                        <div class="button-holder">
+                            <input type="submit" value="Edit" id="updateButton">
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Blog:</label>
-                    <textarea id="editBodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea>
-                </div><br>
-
-                <div class="button-holder">
-                    <input type="submit" value="Edit" id="updateButton">
-                </div>
             </div>
-        </div>
-    </div>
+        </main>
+
+    </section>
+
+
 
 
 </body>

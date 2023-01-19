@@ -872,3 +872,23 @@ footer span a:hover {
         line-height: 38px;
     }
 }
+
+
+/* DASHBOARD styles */
+
+.dashboardSec {
+    display: flex;
+}
+
+.dashboardSec>aside {
+    width: 20vw;
+    border-right: 2px solid #fb750e;
+}
+
+.dashboardSec>main {
+    flex: 1;
+}
+
+.dashboardSec>main>* {
+    width: 100%;
+}
