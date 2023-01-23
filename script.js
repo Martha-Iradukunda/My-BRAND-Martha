@@ -363,3 +363,71 @@
      var nameTwo = window.localStorage.getItem("name");
      console.log(JSON.parse(nameTwo));
  }
+
+
+ // local storage for Message from contact form
+
+ function getQuestions() {
+     var questions = localStorage.getItem("questions");
+     console.log("questions 3: ", questions);
+
+     var table = document.getElementById('content');
+     table.innerHTML = "<tr><th>Email Address</th><th>First Name</th><th>Last Name</th><th>Other Name</th><th>Message</th></tr>";
+
+     if (questions != null) {
+         questions.forEach(function(question, index) {
+             var row = document.createElement('tr');
+             var dataEmail = document.createElement('td');
+             var textEmail = document.createTextNode(question.email);
+             dataEmail.appendChild(textEmail);
+             var dataFirstName = document.createElement('td');
+             var textFirstName = document.createTextNode(question.firstname);
+             dataFirstName.appendChild(textFirstName);
+             var dataLastName = document.createElement('td');
+             var textLastName = document.createTextNode(record.lastname);
+             dataLastName.appendChild(textLastName);
+             var dataOtherName = document.createElement('td');
+             var textOtherName = document.createTextNode(record.othername);
+             dataOtherName.appendChild(textOtherName);
+             var dataMessage = document.createElement('td');
+             var textMessage = document.createTextNode(record.message);
+             dataMessage.appendChild(textMessage);
+
+             row.appendChild(dataEmail);
+             row.appendChild(dataFirstName);
+             row.appendChild(dataLastName);
+             row.appendChild(dataOtherName);
+             row.appendChild(dataMessage);
+             table.appendChild(row);
+
+         });
+
+
+     }
+ }
+
+
+ //ACCOUNTS SIGNED UP
+ function getSignedupUsers() {
+     var users = localStorage.getItem("users");
+     console.log("users 3: ", users);
+
+     var table = document.getElementById('contentAccounts');
+     table.innerHTML = "<tr><th>Name</th><th>Email</th></tr>";
+
+     if (users != null) {
+         users.forEach(function(user, index) {
+             var row = document.createElement('tr');
+             var dataName = document.createElement('td');
+             var textName = document.createTextNode(user.name);
+             dataName.appendChild(textName);
+             var dataEmail = document.createElement('td');
+             var textEmail = document.createTextNode(user.email);
+             dataEmail.appendChild(textEmail);
+
+             row.appendChild(dataName);
+             row.appendChild(dataEmail);
+             table.appendChild(row);
+         });
+     }
+ }
