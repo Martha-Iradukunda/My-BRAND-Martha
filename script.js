@@ -136,6 +136,7 @@
          result.push(blog);
 
 
+
          localStorage.setItem("blog32", JSON.stringify(result));
          titleBlog.value = "";
          bodyBlog.value = "";
