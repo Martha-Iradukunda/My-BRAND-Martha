@@ -13,7 +13,7 @@
 
 </head>
 
-<body onload="getBlogsViewer()" class="blogs">
+<body onload="getBlogs()" onload="getBlogsViewer()" class="blogs" on>
 
     <nav>
         <input type="checkbox" id="check">
@@ -45,35 +45,55 @@
 
 
 
+        <form action="/action_page.php">
+
+            <center>
+                <h1>Create your blogs</h1>
+            </center>
+            <label for="title">Title:</label><br>
+            <input type="text" id="titleBlog" name="titleBlog"><br><br>
+            <label for="blog">Blog:</label><br>
+            <textarea id="bodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea> <br><br>
+            <!-- <input type="submit" value="Submit" onclick="createBlog()"> -->
+
+            <button class="btn" onclick="createBlog()">Create</button>
+
+        </form>
 
 
 
-        <br><br> <br><br>
-        <br><br> I hope your experience was:
-
-        <i class="fa-solid fa-star "></i>
-        <i class="fa-solid fa-star "></i>
-        <i class="fa-solid fa-star "></i>
-        <i class="fa-solid fa-star "></i>
-        <i class="fa-solid fa-star "></i>
-        <i class="fa-solid fa-star-o "></i>
-
-        <br><br>
-
-        <br><br><br> Reach out to me on these social media platforms
-        <a href="https://www.facebook.com/ "> <i class="fa-brands fa-facebook fa- "></i></a>
-        <a href="mailto:marthairadukunda1@gmail.com "><i class="fa-solid fa-envelope fa-70X "></i>
-                </a>
-        <a href="https://www.linkedin.com/in/martha-iradukunda-1305b3241 "><i class="fa-brands fa-linkedin "></i>
-                </a>
-        <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1 "><i class="fa-brands fa-square-google-plus "></i>
-                </a> Please feel free to do so
-        <br><br>
 
 
-        <p> <i class="fa-solid fa-copyright "></i> Made with <i class="fa-solid fa-heart "></i> by @Martha Iradukunda</p>
-        <br><br>
-    </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content-one">
+                <div class="modal-content-two">
+                    <span class="close">&times;</span>
+
+                </div>
+                <div id="h5-holder">
+                    <h5 id="h5-update-form">Update Form</h5><br>
+                </div>
+
+                <div class="former-holder-update">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Title:</label>
+
+                        <input type="text" class="form-control" id="ediTitleContact">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Blog:</label>
+                        <textarea id="editBodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea>
+                    </div><br>
+
+                    <div class="button-holder">
+
+                        <input type="submit" value="Edit" id="updateButton">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 

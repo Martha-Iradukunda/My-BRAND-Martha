@@ -144,7 +144,6 @@
          alert("Invalid title or blog body!");
      }
  }
- //enlarge button
  // ----------------------coming
 
  function getBlogs() {
@@ -207,7 +206,7 @@
 
          blogs.forEach(function(blog, index) {
              let li = document.createElement("li");
-             li.innerText = "Title: " + blog.title + " Body: " + blog.body + " Likes: " + blog.likes;
+             li.innerText = "\n\nTitle: " + blog.title + " \nBody: " + blog.body + "\n Likes: " + blog.likes;
 
 
              var likebutton = document.createElement("button");
