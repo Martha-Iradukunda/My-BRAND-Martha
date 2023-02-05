@@ -13,7 +13,8 @@
 
 </head>
 
-<body onload="getBlogs()" onload="getBlogsViewer()" class="blogs" on>
+<body onload="getBlogs()" class="blogs">
+    <!-- onload="getBlogsViewer()"  -->
 
     <nav>
         <input type="checkbox" id="check">
@@ -41,7 +42,6 @@
         <br><br>
 
 
-        <ul id="blogsDisplay"></ul>
 
 
 
@@ -50,9 +50,9 @@
             <center>
                 <h1>Create your blogs</h1>
             </center>
-            <label for="title">Title:</label><br>
+            <label for="title">Title:</label><br><br>
             <input type="text" id="titleBlog" name="titleBlog"><br><br>
-            <label for="blog">Blog:</label><br>
+            <label for="blog">Blog:</label><br><br>
             <textarea id="bodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea> <br><br>
             <!-- <input type="submit" value="Submit" onclick="createBlog()"> -->
 
@@ -93,6 +93,7 @@
                 </div>
             </div>
         </div>
+        <ul id="blogsDisplay"></ul>
 
     </div>
 
