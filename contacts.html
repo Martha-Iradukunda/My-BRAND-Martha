@@ -83,7 +83,8 @@
                         <p><b><i> Type your message here </p></b></i>
                             <textarea rows=8 cols=60 id="messageContact"></textarea>
 
-                            <button class="btn" onclick="createContact()">Submit</button>
+                            <button class="btn">Submit</button>
+                            <!--  onclick="createContact()" -->
                             <br><br>
                             <br><br> <br><br>
 
@@ -105,11 +106,58 @@
     </section>
 
     <!-- footer section start -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>r><br><br><br><br><br><br><br><br><br><br><br><br>r><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <span>Created By <a href="https://www.youtube.com/channel/UCt3FM2IEMBHF12MhLArIytA">@Martha I</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
     </footer>
 
+    <script>
+        const submit = document.querySelector('.btn')
+        const firstNameContact = document.querySelector('#firstNameContact')
+        const lastNameContact = document.querySelector('#lastNameContact')
+        const emailContact = document.querySelector('#emailContact')
+        const messageContact = document.querySelector('#messageContact')
+
+        submit.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            const contactData = {
+                fname: firstNameContact.value,
+                lname: lastNameContact.value,
+                email: emailContact.value,
+                message: messageContact.value
+
+
+
+            }
+            console.log(contactData)
+
+            const newData = {
+                method: 'POST',
+
+                headers: {
+                    'Content-Type': "application/json"
+
+                    // "authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify(contactData)
+            }
+
+            console.log(newData)
+            fetch("http://localhost:6500/api/messages", newData)
+                .then(async(n) => {
+                    const res = await n.json()
+                    console.log(res)
+                    if (res) {
+                        alert('Message Sent');
+                        location.reload();
+                    } else {
+                        alert('Message not sent!')
+                    }
+
+                })
+        })
+    </script>
 </body>
 
 </html>

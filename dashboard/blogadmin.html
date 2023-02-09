@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="/script.js"></script>
+    <script defer src="blog.js"></script>
     <link rel="stylesheet" href="/Allstyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <title>Blogs admin</title>
 </head>
 
-<body onload="getBlogs()" onload="getBlogsViewer()">
+<body>
+    <!--  onload="getBlogs()" onload="getBlogsViewer()" -->
 
     <nav>
         <input type="checkbox" id="check">
@@ -46,18 +47,17 @@
             <h3> <a href="/dashboard/messages.html">MESSAGES</a></h3>
             <br><br><br><br><br><br><br> <br><br><br><br><br><br><br>
 
-
-
         </aside>
 
         <main>
 
             <form>
                 <label for="title">Title:</label><br>
-                <input type="text" id="titleBlog" name="titleBlog"><br>
+                <input type="text" id="blogtitle" name="titleBlog"><br>
                 <label for="blog">Blog:</label><br>
-                <textarea id="bodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea>
-                <input type="submit" value="Submit" onclick="createBlog()">
+                <textarea id="blogbody" name="bodyBlog" value="Body" rows="4" cols="50"></textarea>
+                <input type="submit" value="Submit" class="submit">
+                <!--  onclick="createBlog()" -->
             </form>
 
             <ul id="blogsDisplay"></ul>

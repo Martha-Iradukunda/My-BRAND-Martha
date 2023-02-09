@@ -22,7 +22,8 @@
         <p>Password :</p>
         <input type="password" name="" placeholder="Password" id="pass">
         <input type="checkbox" onclick="myfunction()">
-        <input type="submit" name="" value="Sign In" onclick="validate()">
+        <input type="submit" name="" value="Sign In" class="btn">
+        <!-- onclick="validate()" -->
         <p>No Account? <a href="signup.html" class="btn">Sign Up</a>
         </p>
     </div>
@@ -31,6 +32,49 @@
         <p id="length"></p>
     </div>
 
+
+    <script>
+        const submit = document.querySelector('.btn')
+        const username = document.querySelector('#username')
+        const pass = document.querySelector('#pass')
+
+
+        submit.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            const loginData = {
+                username: username.value,
+                password: pass.value,
+            }
+            console.log(loginData)
+
+            const newData = {
+                method: 'POST',
+
+                headers: {
+                    'Content-Type': "application/json"
+
+                },
+                body: JSON.stringify(loginData)
+            }
+
+            console.log(newData)
+            fetch("http://localhost:6500/api/login", newData)
+                .then(async(n) => {
+                    const res = await n.json()
+                    console.log(res)
+                    if (res) {
+                        alert('You have signed in successfully ');
+                        window.location.replace("index.html");
+                        location.reload();
+
+                    } else {
+                        alert('Invalid credentials!\nS Please put the correct username and password!')
+                    }
+
+                })
+        })
+    </script>
 </body>
 
 </html>

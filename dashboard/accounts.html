@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="/script.js"></script>
+
     <link rel="stylesheet" href="/Allstyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
@@ -90,7 +91,60 @@
 
     </section>
 
+    <script>
+        const submit = document.querySelector('.btn')
+        const username1 = document.querySelector('#username1')
+        const email1 = document.querySelector('#email1')
+        const pass1 = document.querySelector('#pass1')
+        const pwdTwoSignUp = document.querySelector('#pwdTwoSignUp')
 
+        submit.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            const signupData = {
+                username: username1.value,
+                email: email1.value,
+                password: pass1.value,
+                repeatPassword: pwdTwoSignUp.value
+            }
+            console.log(userData)
+
+            const newData = {
+                method: 'GET',
+
+                headers: {
+                    'Content-Type': "application/json"
+
+                    // "authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify(userData)
+            }
+
+            console.log(newData)
+            fetch("http://localhost:6500/api/getAllUsers", newData)
+                .then(async(n) => {
+                    const res = await n.json()
+                    console.log(res)
+                    let allusers = res.data
+                    allusers.forEach((data) => {
+
+                        id = JSON.stringify(data._id);
+                        submit.innerHTML += `
+            // <div class="card">
+            <h3>${data.username}</h3>
+            <p>${data.email}</p>
+            <p>${data.password}</p>
+            <p>${data.repeatPassword}</p>
+
+
+
+        // </div>
+        `
+                    })
+
+                })
+        })
+    </script>
 </body>
 
 </html>

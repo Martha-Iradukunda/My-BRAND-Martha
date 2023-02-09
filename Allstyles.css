@@ -106,6 +106,7 @@ a:hover {
 /* home section styling */
 
 .home {
+    margin-left: 60px;
     display: flex;
     background: url("img/ritap.png") no-repeat center;
     height: 100vh;
@@ -183,6 +184,7 @@ a:hover {
 /* about section styling */
 
 .about {
+    margin-left: 70px;
     display: flex;
     background: url("img/bgimg.jpg") no-repeat center;
     height: 100vh;
@@ -255,6 +257,7 @@ a:hover {
 /* portifolio section styling */
 
 .portifo {
+    margin-left: 70px;
     display: flex;
     background: url("img/ritap.png") no-repeat center;
     height: 100vh;
@@ -324,6 +327,7 @@ a:hover {
 /* skills section styling */
 
 .skills {
+    margin-left: 70px;
     display: flex;
     background: url("img/skillss.jpg") no-repeat center;
     height: 100vh;
@@ -332,7 +336,7 @@ a:hover {
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
-    margin: .9rem;
+    /* margin: .9rem; */
 }
 
 .skills .title::after {
@@ -437,6 +441,7 @@ a:hover {
 /* All pages section */
 
 .teams .carousel .card {
+    margin-left: 70px;
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
@@ -509,6 +514,7 @@ a:hover {
 /* contact section styling */
 
 .contact {
+    margin-left: 70px;
     display: flex;
     background: url("img/contac.jpg") no-repeat center;
     height: 100vh;
@@ -578,6 +584,7 @@ a:hover {
 }
 
 footer {
+    margin-left: 70px;
     background: #2f2f31;
     padding: 15px 23px;
     color: #fff;
@@ -597,6 +604,7 @@ footer span a:hover {
 /* BLOGS */
 
 .blogs {
+    margin-left: 40px;
     display: flex;
     background: url("img/blogsss.jfif") no-repeat center;
     height: 100vh;

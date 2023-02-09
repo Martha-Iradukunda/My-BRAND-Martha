@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martha's site</title>
-    <script defer src="script.js"></script>
+    <script defer src="blogpage.js"></script>
 
-    <link rel="stylesheet" href="Allstyles.css">
+    <link rel="stylesheet" href="blogPage.css">
+    <!-- <link rel="stylesheet" href="Allstyles.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://kit.fontawesome.com/ee4169bd2e.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body onload="getBlogs()" class="blogs">
-    <!-- onload="getBlogsViewer()"  -->
+<body class="blogs">
+    <!-- onload="getBlogsViewer()" 
+    onload="getBlogs()" -->
 
     <nav>
         <input type="checkbox" id="check">
@@ -36,68 +38,16 @@
     </nav>
 
 
+    <main>
+        <div class="container">
+            <!-- <div class="card">
+                <h3>Title</h3>
+                <p>Body</p>
 
-    <div class="content">
-
-        <br><br>
-
-
-
-
-
-        <form>
-
-            <center>
-                <h1>Create your blogs</h1>
-            </center>
-            <label for="title">Title:</label><br><br>
-            <input type="text" id="titleBlog" name="titleBlog"><br><br>
-            <label for="blog">Blog:</label><br><br>
-            <textarea id="bodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea> <br><br>
-            <!-- <input type="submit" value="Submit" onclick="createBlog()"> -->
-
-            <button class="btn" onclick="createBlog()">Create</button>
-
-        </form>
-
-        <ul id="blogsDisplay"></ul>
-
-
-
-
-        <div id="myModal" class="modal">
-            <div class="modal-content-one">
-                <div class="modal-content-two">
-                    <span class="close">&times;</span>
-
-                </div>
-                <div id="h5-holder">
-                    <h5 id="h5-update-form">Update Form</h5><br>
-                </div>
-
-                <div class="former-holder-update">
-                    <div class="form-group">
-                        <label for="formGroupExampleInput">Title:</label>
-
-                        <input type="text" class="form-control" id="ediTitleContact">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="formGroupExampleInput2">Blog:</label>
-                        <textarea id="editBodyBlog" name="bodyBlog" value="Body" rows="4" cols="50"></textarea>
-                    </div><br>
-
-                    <div class="button-holder">
-
-                        <input type="submit" value="Edit" id="updateButton">
-                    </div>
-                </div>
-            </div>
+            </div> -->
         </div>
 
-    </div>
-
-
+    </main>
 
 </body>
 

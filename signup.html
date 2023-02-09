@@ -30,7 +30,8 @@
         <input type="password" id="pwdTwoSignUp" name="pwd">
 
         <input type="checkbox" onclick="myfunctionUp()">
-        <input type="submit" name="" value="Create" onclick="validateUp()">
+        <input type="submit" name="" value="Create" class="btn">
+        <!-- onclick="validateUp()"  -->
         <p>You have an account? <a href="login.html" class="btn">Sign In</a></p>
 
 
@@ -39,6 +40,51 @@
     <div>
         <p id="length"></p>
     </div>
+
+
+    <script>
+        const submit = document.querySelector('.btn')
+        const username1 = document.querySelector('#username1')
+        const email1 = document.querySelector('#email1')
+        const pass1 = document.querySelector('#pass1')
+        const pwdTwoSignUp = document.querySelector('#pwdTwoSignUp')
+
+        submit.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            const signupData = {
+                username: username1.value,
+                email: email1.value,
+                password: pass1.value,
+                repeatPassword: pwdTwoSignUp.value
+            }
+            console.log(signupData)
+
+            const newData = {
+                method: 'POST',
+
+                headers: {
+                    'Content-Type': "application/json"
+
+                },
+                body: JSON.stringify(signupData)
+            }
+
+            console.log(newData)
+            fetch("http://localhost:6500/api/signUp", newData)
+                .then(async(n) => {
+                    const res = await n.json()
+                    console.log(res)
+                    if (res) {
+                        alert('Account created successfully!, You can now Login ');
+                        location.reload();
+                    } else {
+                        alert('Account not created!')
+                    }
+
+                })
+        })
+    </script>
 </body>
 
 </html>

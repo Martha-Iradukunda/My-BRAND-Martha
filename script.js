@@ -182,7 +182,6 @@
 
              blogsDisplay.appendChild(li);
              blogsDisplay.appendChild(deletebutton);
-             // console.log("\t\t");
              blogsDisplay.appendChild(editbutton);
              console.log("\t\t");
 
