@@ -65,8 +65,13 @@
                     console.log(res)
                     if (res) {
                         alert('You have signed in successfully ');
-                        window.location.replace("index.html");
-                        location.reload();
+                        localStorage.setItem("token", res.token);
+                        console.log(res)
+                            // location.reload();
+                            // window.location.replace("index.html");
+
+                        // window.location.replace("index.html");
+
 
                     } else {
                         alert('Invalid credentials!\nS Please put the correct username and password!')

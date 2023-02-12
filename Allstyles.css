@@ -886,11 +886,13 @@ footer span a:hover {
 
 .dashboardSec {
     display: flex;
+    margin-left: 40px;
+    margin-right: 30px;
 }
 
 .dashboardSec>aside {
-    width: 20vw;
-    border-right: 2px solid #fb750e;
+    /* width: 20vw; */
+    border-right: 5px solid #fb750e;
 }
 
 .dashboardSec>main {
@@ -901,5 +903,20 @@ footer span a:hover {
     width: 100%;
 }
 
+.table_section {
+    width: 100%;
+    margin-top: 50px;
+    /* border: 2px solid black; */
+}
 
-/* BLOGS */
+.table_section th {
+    color: #fb750e;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+    border-color: #7644ff;
+    /* border-right: 2px solid black; */
+}
