@@ -16,9 +16,9 @@
 <body>
 
     <div class="form">
-        <h1>LOGIN HERE</h1>
-        <p>Username :</p>
-        <input type="text" name="" placeholder="Your Username" id="username">
+        <h3>LOGIN HERE</h3><br><br>
+        <p>Email :</p>
+        <input type="text" name="" placeholder="Your email" id="email">
         <p>Password :</p>
         <input type="password" name="" placeholder="Password" id="pass">
         <input type="checkbox" onclick="myfunction()">
@@ -32,10 +32,9 @@
         <p id="length"></p>
     </div>
 
-
     <script>
         const submit = document.querySelector('.btn')
-        const username = document.querySelector('#username')
+        const email = document.querySelector('#email')
         const pass = document.querySelector('#pass')
 
 
@@ -43,41 +42,40 @@
             e.preventDefault()
 
             const loginData = {
-                username: username.value,
+                email: email.value,
                 password: pass.value,
             }
             console.log(loginData)
+            try {
+                const newData = {
+                    method: 'POST',
 
-            const newData = {
-                method: 'POST',
+                    headers: {
+                        'Content-Type': "application/json"
 
-                headers: {
-                    'Content-Type': "application/json"
+                    },
+                    body: JSON.stringify(loginData)
+                }
 
-                },
-                body: JSON.stringify(loginData)
-            }
-
-            console.log(newData)
-            fetch("http://localhost:6500/api/login", newData)
-                .then(async(n) => {
-                    const res = await n.json()
-                    console.log(res)
-                    if (res) {
-                        alert('You have signed in successfully ');
-                        localStorage.setItem("token", res.token);
+                console.log(newData)
+                fetch("http://localhost:6500/api/login", newData)
+                    .then(async(n) => {
+                        const res = await n.json()
                         console.log(res)
-                            // location.reload();
-                            // window.location.replace("index.html");
+                        if (res) {
+                            alert('You have signed in successfully ');
+                            localStorage.setItem("token", res.token);
+                            console.log(res)
+                                // location.reload();
+                                // window.location.replace("index.html");
+                        } else {
+                            alert('Invalid credentials!\nS Please put the correct email and password!')
+                        }
 
-                        // window.location.replace("index.html");
-
-
-                    } else {
-                        alert('Invalid credentials!\nS Please put the correct username and password!')
-                    }
-
-                })
+                    })
+            } catch (error) {
+                console.log('Wrong input email or password')
+            }
         })
     </script>
 </body>
