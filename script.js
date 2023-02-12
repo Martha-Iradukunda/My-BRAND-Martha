@@ -9,14 +9,14 @@
  var logIn = document.querySelector("a[href*='login.html']")
  var signUp = document.querySelector("a[href='signup.html']")
  console.log(logIn)
- var currentuser = localStorage.getItem("user");
+ var currentuser = localStorage.getItem("token");
  if (currentuser != null) {
-     currentuser = JSON.parse(currentuser)
+     //  currentuser = JSON.parse(currentuser)
      if (logIn != null) {
          logIn.innerText = "LOGOUT";
          logIn.addEventListener("click", event => {
              event.preventDefault()
-             localStorage.removeItem("user")
+             localStorage.removeItem("token")
              window.location.assign("/")
 
 

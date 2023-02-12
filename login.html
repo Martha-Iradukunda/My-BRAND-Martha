@@ -38,7 +38,7 @@
         const pass = document.querySelector('#pass')
 
 
-        submit.addEventListener('click', (e) => {
+        submit.addEventListener('click', async(e) => {
             e.preventDefault()
 
             const loginData = {
@@ -58,21 +58,28 @@
                 }
 
                 console.log(newData)
-                fetch("http://localhost:6500/api/login", newData)
-                    .then(async(n) => {
-                        const res = await n.json()
-                        console.log(res)
-                        if (res) {
-                            alert('You have signed in successfully ');
-                            localStorage.setItem("token", res.token);
-                            console.log(res)
-                                // location.reload();
-                                // window.location.replace("index.html");
-                        } else {
-                            alert('Invalid credentials!\nS Please put the correct email and password!')
-                        }
+                await fetch("http://localhost:6500/api/login", newData)
 
-                    })
+                .then(async(n) => {
+
+                    const res = await n.json()
+                    console.log(res)
+                    if (n.status == 200) {
+                        alert('You have signed in successfully ');
+                        localStorage.setItem("token", res.token);
+                        console.log(res)
+                            // location.reload();
+                            // window.location.replace("index.html");
+                    } else {
+                        alert('Invalid credentials!\nS Please put the correct email and password!')
+                    }
+
+                }).catch(error => {
+                    console.log(error)
+
+                })
+
+
             } catch (error) {
                 console.log('Wrong input email or password')
             }

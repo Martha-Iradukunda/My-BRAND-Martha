@@ -3,7 +3,7 @@ const token = localStorage.getItem("token")
 const newData = {
     method: 'GET',
     headers: {
-        'Content-Type': "application/json",
+        // 'Content-Type': "application/json",
         "auth_token": token
     }
 }
@@ -12,6 +12,7 @@ fetch("http://localhost:6500/api/getAllUsers", newData)
     .then(async(n) => {
         const res = await n.json()
         console.log(res)
+
 
         res.allUsers.forEach(user => {
             users.innerHTML += `
