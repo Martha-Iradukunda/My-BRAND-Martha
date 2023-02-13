@@ -657,7 +657,7 @@ footer span a:hover {
     display: inline-block;
     margin-bottom: 20px;
     background: linear-gradient(120deg, #fb750e 20.69%, #7644ff 50.19%, #fb750e 79.69%);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
     font-style: oblique;
     font-size: larger;
