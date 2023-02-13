@@ -71,7 +71,7 @@
             }
 
             console.log(newData)
-            fetch("http://localhost:6500/api/signUp", newData)
+            fetch("https://marthairadukunda.cyclic.app/api/signUp", newData)
                 .then(async(n) => {
                     const res = await n.json()
                     console.log(res)

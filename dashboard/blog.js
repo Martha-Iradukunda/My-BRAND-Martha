@@ -26,7 +26,7 @@ submit.addEventListener('click', (e) => {
     }
 
     console.log(newData)
-    fetch("http://localhost:6500/api/blogs", newData)
+    fetch("https://marthairadukunda.cyclic.app/api/blogs", newData)
         .then(async(n) => {
             const res = await n.json()
             console.log(res)
