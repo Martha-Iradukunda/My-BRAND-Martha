@@ -17,7 +17,7 @@
          logIn.addEventListener("click", event => {
              event.preventDefault()
              localStorage.removeItem("token")
-             window.location.assign("/")
+             window.location.assign("login.html")
 
 
          })

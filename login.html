@@ -68,8 +68,8 @@
                         alert('You have signed in successfully ');
                         localStorage.setItem("token", res.token);
                         console.log(res)
-                            // location.reload();
-                            // window.location.replace("index.html");
+                        location.reload();
+                        window.location.replace("index.html");
                     } else {
                         alert('Invalid credentials!\nS Please put the correct email and password!')
                     }
