@@ -110,6 +110,7 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    /* background: #222; */
 }
 
 .container {
@@ -130,15 +131,45 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #fb750e;
+    /* color: white; */
+    background: white;
 }
 
 @media (max-width: 690px) {
     .max-width {
         padding: 0 23px;
     }
-    .card {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        width: 95%;
+        display: grid;
+        grid-gap: 0.5px;
+        background: transparent;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container h1 {
         font-size: 60px;
+    }
+    .container p {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container h1 {
+        font-size: 30px;
+    }
+    .container p {
+        font-size: 15px;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        width: 95%;
+        display: grid;
+        grid-gap: 0.spx;
+        background: transparent;
         flex-direction: row;
+        align-items: center;
     }
 }
