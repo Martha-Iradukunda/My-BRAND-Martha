@@ -126,13 +126,22 @@ main {
 
 .card {
     margin-top: 20px;
-    width: 300px;
+    width: 380px;
     min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* color: white; */
-    background: white;
+    background: #222;
+    margin-left: 20px;
+}
+
+.card p {
+    color: white;
+}
+
+.card h3 {
+    color: #fb750e;
 }
 
 @media (max-width: 690px) {
