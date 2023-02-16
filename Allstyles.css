@@ -136,9 +136,10 @@
         }
         
         .home .home-content .text-1 {
-            font-size: 40px;
+            font-size: 50px;
             font-weight: 600;
             margin: .9rem;
+            color: #fb750e;
         }
         
         .home .home-content .text-2 {
@@ -848,8 +849,8 @@
             }
             .teams {
                 width: 100%;
-                margin-top: 120px;
-                padding: 20px;
+                /* margin-top: 80px; */
+                /* padding: 5px; */
             }
             .home .home-content .text-3 {
                 font-size: 27px;
