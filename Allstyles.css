@@ -914,9 +914,13 @@
             color: #222
         }
         
+        a.actived
+         {
+            color: #fb750e;
+        }
         a.actived,
         a:hover {
-            color: #fb750e;
+            color: white;
             transition: .5s;
         }
         
