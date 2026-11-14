@@ -1,0 +1,20 @@
+{
+  "name": "martha-iradukunda-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Martha Iradukunda's portfolio: static site + Netlify Functions API (blogs, messages, résumé editor with PDF) on Netlify Blobs. One folder, one deploy.",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "dev": "node tools/dev-server.mjs",
+    "resume-pdf": "node tools/make-resume-pdf.mjs",
+    "test": "node tests/api.test.mjs && node tests/site-check.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "11.1.7",
+    "jspdf": "4.2.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

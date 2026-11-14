@@ -1,0 +1,55 @@
+# Martha Iradukunda's portfolio — one folder, one Netlify site.
+#   site/                    the pages, styles, scripts and images (built from src/ by `npm run build`, kept in git)
+#   netlify/functions/api.mjs  the backend: /api/* and /resume.pdf (blogs, messages, résumé editor + PDF), data in Netlify Blobs
+[build]
+  publish = "site"
+  command = "node tools/build.mjs"
+
+[functions]
+  node_bundler = "esbuild"
+
+# old addresses keep working
+[[redirects]]
+  from = "/signup"
+  to = "/login"
+  status = 301
+[[redirects]]
+  from = "/signup.html"
+  to = "/login"
+  status = 301
+[[redirects]]
+  from = "/dashboard/adminstrator.html"
+  to = "/dashboard/"
+  status = 301
+[[redirects]]
+  from = "/dashboard/blogadmin.html"
+  to = "/dashboard/"
+  status = 301
+[[redirects]]
+  from = "/dashboard/messages.html"
+  to = "/dashboard/"
+  status = 301
+[[redirects]]
+  from = "/dashboard/accounts.html"
+  to = "/dashboard/"
+  status = 301
+[[redirects]]
+  from = "/admin"
+  to = "/dashboard/"
+  status = 301
+[[redirects]]
+  from = "/cv"
+  to = "/resume"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+[[headers]]
+  for = "/dashboard/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Cache-Control = "no-store"
